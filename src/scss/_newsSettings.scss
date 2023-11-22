@@ -1,0 +1,66 @@
+.settingsMain {
+    height: 100vh;
+    background-color: rgb(191, 191, 191);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .textContainer {
+        margin-top: 50px;
+        text-align: center;
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        h4 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+    }
+
+    .card {
+        
+
+
+        
+        display: flex;
+        row-gap: 4em;
+        flex-direction: column;
+    
+
+        .switch {
+            position: relative;
+            display: block;
+            height: 2em;
+            width: 3.5em;
+            background-color: lightgrey;
+            border-radius: 1em;
+            transition: background-color 500ms ease;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0.15em;
+                left: 3%;
+                height: 1.7em;
+                width: 1.7em;
+                border-radius: 50%;
+                background-color: hsl(0, 0%, 0%);
+                transition: left 500ms ease, background-color 500ms ease;
+            }
+        }
+        .switch__checkbox{
+            display: none;
+        }
+        
+        .switch__checkbox:checked + .switch:after {
+            left: calc(97% - 1.7em);
+            background-color: (lightgrey);
+        }
+        
+        .switch__checkbox:checked + .switch{
+            background-color: hsl(0, 10%, 32%);
+        }
+}
+}

@@ -1,0 +1,33 @@
+@import "./reset";
+@import "./variables";
+
+html, body{
+    font-family: $primary-font, sans-serif;
+}
+
+h1{
+    font-size: $primary-heading;
+    font-weight: bold;
+}
+
+h2{
+    font-size: $secondary-heading;
+    font-weight: bold;
+}
+
+h3{
+    font-size: $sub-title;
+    font-weight: normal;
+}
+
+.card-title{
+    font-size: $card-title;
+    font-weight: bold;
+}
+
+.card-subtitle {
+    font-size: $card-subtitle;
+    font-weight: light;
+}
+
+

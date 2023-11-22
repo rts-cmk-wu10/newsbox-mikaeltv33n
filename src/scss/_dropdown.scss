@@ -1,0 +1,129 @@
+@use "./base";
+
+.categories-container {
+    width: 100%;
+    margin: 0 auto; // Center the container if needed
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+    .category {
+        width: 100%;
+        box-sizing: border-box;
+
+
+        &__summary {
+            display: flex;
+            height: 3em;
+            justify-content: space-between;
+
+            border: {
+                top: 1px solid rgb(212, 193, 193)
+            }
+        }
+
+        &__summaryContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5px;
+
+        }
+
+        &__logo {
+            border-radius: 50%;
+            background-color: rgb(232, 223, 223);
+            height: 20px;
+            width: 20px;
+        }
+
+
+        &__dropdown.rotate {
+            transform: rotate(180deg)
+        }
+
+        &__content {
+            display: flex;
+            gap: 4em;
+            flex-direction: column;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+
+            &__headline {}
+
+            &__description {}
+
+            &>ul {
+                overflow: hidden;
+                list-style-type: none;
+                padding: 0;
+                margin-right: -3px;
+
+                li {
+                    display: flex;
+                    overflow-x: auto;
+                    scroll-snap-type: x mandatory;
+
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    button {
+                        margin-top: 16px;
+                        font-size: large;
+                        border: none;
+                        outline: none;
+                        color: white;
+                        flex: 1 0 30%;
+
+                        &.archive-button {
+
+                            background-color: #87BCBF;
+                        }
+
+                        &.delete-button {
+                            background-color: #D95454;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+.article {
+    &__container {
+        border-top: solid 1px;
+        margin-top: 10px;
+        display: flex;
+        gap: 2em;
+        align-items: center;
+        flex: 2 0 100%;
+    }
+
+    &__image {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+
+    }
+
+    &__headline {
+        @extend .card-title;
+
+    }
+}

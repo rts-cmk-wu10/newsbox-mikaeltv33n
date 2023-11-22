@@ -1,0 +1,1 @@
+(()=>{"use strict";!async function(){if(!window.location.pathname.includes("inbox.html"))return;const t=await fetch("https://api.nytimes.com/svc/search/v2/articlesearch.json"),e=await t.json();localStorage.setItem("pokemon",JSON.stringify(e));const o=JSON.parse(localStorage.getItem("headline"));console.log(o)}()})();

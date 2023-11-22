@@ -1,0 +1,29 @@
+.primarySearch {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+	
+
+    .searchField {
+        height: 42px;
+		display: flex;
+        box-sizing: border-box;
+        margin: auto;
+        margin-top: 12px;
+        width: 90%;
+		padding-left: 40px;
+        padding-right: 30px;
+		border: none;
+		border-radius: 5px;
+		background: rgb(201, 195, 195);
+    }
+
+
+	.search-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 58px; 
+        color: #333; 
+    }
+}
