@@ -12,7 +12,7 @@ export default function (onlyarchived = false, action = "archive") {
         "movies", "nyregion", "obituaries", "opinion", "politics", "realestate", "science", "sundayreview", "technology",
         "theater", "t-magazine", "travel", "upshot", "us", "world"
     ];
-
+    
     // Event listener for clicks on the document
     document.addEventListener("click", function (event) {
         const clickedElement = event.target;
@@ -41,7 +41,7 @@ export default function (onlyarchived = false, action = "archive") {
     // Iterate through categories and create corresponding elements
     categories.filter(category => onlyarchived || !hiddenCategories.includes(category)).forEach(category => {
         if (filterCategory[category] && !window.location.href.includes("settings.html")) return 
-                    
+
         // Create a details element for each category
         const categoryElement = document.createElement('details');
         categoryElement.className = 'category';

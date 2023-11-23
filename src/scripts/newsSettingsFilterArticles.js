@@ -65,7 +65,7 @@ export default (function () {
 
     // Restore categories from local storage or use the default list
     
-    
+
 
     // Iterate through categories and create corresponding article cards
     categories.forEach(category => {

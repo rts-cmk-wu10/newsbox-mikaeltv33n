@@ -45,7 +45,7 @@ function getJSONfromLocalStorage(key) {
         "movies", "nyregion", "obituaries", "opinion", "politics", "realestate", "science", "sundayreview", "technology",
         "theater", "t-magazine", "travel", "upshot", "us", "world"
     ];
-
+    
     // Event listener for clicks on the document
     document.addEventListener("click", function (event) {
         const clickedElement = event.target;
@@ -74,7 +74,7 @@ function getJSONfromLocalStorage(key) {
     // Iterate through categories and create corresponding elements
     categories.filter(category => onlyarchived || !hiddenCategories.includes(category)).forEach(category => {
         if (filterCategory[category] && !window.location.href.includes("settings.html")) return 
-                    
+
         // Create a details element for each category
         const categoryElement = document.createElement('details');
         categoryElement.className = 'category';
@@ -288,7 +288,7 @@ var aubergine_feta_namespaceObject = "data:image/png;base64,ZXhwb3J0IGRlZmF1bHQg
 
     // Restore categories from local storage or use the default list
     
-    
+
 
     // Iterate through categories and create corresponding article cards
     categories.forEach(category => {
