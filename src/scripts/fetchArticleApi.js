@@ -36,8 +36,12 @@ export default function (onlyarchived = false, action = "archive") {
     // Hidden categories (not implemented in the provided code)
     const hiddenCategories = [];
 
+    const filterCategory = JSON.parse(localStorage.getItem('checked'))
+
     // Iterate through categories and create corresponding elements
     categories.filter(category => onlyarchived || !hiddenCategories.includes(category)).forEach(category => {
+        if (filterCategory[category] && !window.location.href.includes("settings.html")) return 
+                    
         // Create a details element for each category
         const categoryElement = document.createElement('details');
         categoryElement.className = 'category';
