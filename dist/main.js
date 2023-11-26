@@ -64,20 +64,20 @@ function getJSONfromLocalStorage(key) {
     const archivedArticles = getJSONfromLocalstorage("archived_articles") || [];
 
     // Get the categories container from the document
-    const categoriesContainer = document.querySelector('.categories');
+    const categoriesContainer = document.querySelector(".categories");
 
     // Hidden categories (not implemented in the provided code)
     const hiddenCategories = [];
 
-    const filterCategory = JSON.parse(localStorage.getItem('checked'))
+    const filterCategory = JSON.parse(localStorage.getItem("checked"))
 
     // Iterate through categories and create corresponding elements
     categories.filter(category => onlyarchived || !hiddenCategories.includes(category)).forEach(category => {
         if (filterCategory[category] && !window.location.href.includes("settings.html")) return 
 
         // Create a details element for each category
-        const categoryElement = document.createElement('details');
-        categoryElement.className = 'category';
+        const categoryElement = document.createElement("details");
+        categoryElement.className = "category";
 
         // Populate the summary section with category information
         categoryElement.innerHTML = `
@@ -91,14 +91,14 @@ function getJSONfromLocalStorage(key) {
         `;
 
         // Create a div element for the category content
-        const contentElement = document.createElement('div');
-        contentElement.className = 'category__content';
+        const contentElement = document.createElement("div");
+        contentElement.className = "category__content";
         const ulElement = document.createElement("ul");
         contentElement.appendChild(ulElement);
         // Add an event listener to the dropdown icon for fetching articles
         categoryElement.querySelector(".category__dropdown").addEventListener("click", function () {
             // Check if content already exists
-            if (categoryElement.querySelector('.category__content')) return;
+            if (categoryElement.querySelector(".category__content")) return;
 
             // Fetch articles from the New York Times API
             fetch(`https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=uZhoGPSEKtSyAp1AGwJYzO8qDAJsjMvc`)
@@ -122,7 +122,7 @@ function getJSONfromLocalStorage(key) {
                         const listItemElement = document.createElement("li");
 
                         // Create an article container
-                        const articleContainer = document.createElement('section');
+                        const articleContainer = document.createElement("section");
                         listItemElement.appendChild(articleContainer);
 
                         // Create a button and add it to the list item
@@ -193,7 +193,7 @@ function getJSONfromLocalStorage(key) {
                     categoryElement.appendChild(contentElement);
                 })
                 .catch(error => {
-                    console.error(`Error fetching ${category} articles:`, error);
+                    console.error("Error fetching ${category} articles:", error);
                 });
         });
 
@@ -286,7 +286,6 @@ var aubergine_feta_namespaceObject = "data:image/png;base64,ZXhwb3J0IGRlZmF1bHQg
     // Get the categories container from the document
     const categoriesContainer = document.querySelector(".categories");
 
-    // Restore categories from local storage or use the default list
     
 
 

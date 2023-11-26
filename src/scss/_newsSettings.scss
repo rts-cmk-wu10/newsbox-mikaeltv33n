@@ -49,7 +49,7 @@
                 height: 1.7em;
                 width: 1.7em;
                 border-radius: 50%;
-                background-color: hsl(0, 0%, 0%);
+                background-color:#FFFFFF;
                 transition: left 500ms ease, background-color 500ms ease;
             }
         }
@@ -63,7 +63,7 @@
         }
         
         .switch__checkbox:checked + .switch{
-            background-color: hsl(0, 10%, 32%);
+            background-color: #87BCBF;
         }
 }
 }

@@ -63,7 +63,6 @@ export default (function () {
     // Get the categories container from the document
     const categoriesContainer = document.querySelector(".categories");
 
-    // Restore categories from local storage or use the default list
     
 
 
